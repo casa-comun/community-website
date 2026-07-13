@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Común — Barichara</title>
+<meta name="description" content="Casa Común es un organismo comunitario en Barichara, Colombia, que transforma recursos locales en una economía solidaria, regenerativa y de abundancia compartida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/casa-comun-logo.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a href="#inicio" class="brand">
+    <img src="assets/casa-comun-logo.jpg" alt="Casa Común — Barichara" class="brand-mark">
+  </a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="#organismo">El organismo</a>
+    <a href="#impacto">Impacto</a>
+    <a href="#chocolate-comun">Chocolate Común</a>
+    <a href="#sueno">Sueño</a>
+    <a href="#contacto" class="nav-cta">Visítanos</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <svg class="hero-roots" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g class="root-lines" fill="none" stroke="currentColor" stroke-width="1.4">
+        <path class="root-path" d="M600,780 C560,620 420,560 300,520 C200,486 120,430 60,340"/>
+        <path class="root-path" d="M600,780 C620,600 700,540 830,500 C930,470 1020,400 1080,300"/>
+        <path class="root-path" d="M600,780 C580,560 560,420 500,300 C460,220 400,160 340,80"/>
+        <path class="root-path" d="M600,780 C630,570 660,430 730,320 C780,240 850,180 920,100"/>
+        <path class="root-path" d="M600,780 C560,650 480,600 380,610 C280,620 190,660 100,700"/>
+        <path class="root-path" d="M600,780 C650,650 740,610 850,620 C950,630 1040,670 1130,710"/>
+      </g>
+      <g class="root-nodes" fill="currentColor">
+        <circle cx="60" cy="340" r="4"/>
+        <circle cx="1080" cy="300" r="4"/>
+        <circle cx="340" cy="80" r="4"/>
+        <circle cx="920" cy="100" r="4"/>
+        <circle cx="100" cy="700" r="4"/>
+        <circle cx="1130" cy="710" r="4"/>
+      </g>
+    </svg>
+
+    <div class="hero-content">
+      <img src="assets/casa-comun-logo.jpg" alt="Sello Casa Común, Barichara — Cra 8 #8-19" class="hero-logo">
+      <p class="eyebrow">Barichara, Santander · Colombia</p>
+      <h1>Un organismo vivo para una <em>economía solidaria</em></h1>
+      <p class="hero-lede">Casa Común transforma la economía de Barichara en un tejido de abundancia compartida — donde los recursos del territorio, el trabajo de sus productores y el cuidado del entorno se convierten en riqueza para todos.</p>
+      <div class="hero-actions">
+        <a href="#organismo" class="btn btn-primary">Conoce el organismo</a>
+        <a href="#chocolate-comun" class="btn btn-ghost">Chocolate Común →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUE HACEMOS -->
+  <section class="section section-intro" id="que-hacemos">
+    <div class="wrap wrap-narrow">
+      <p class="section-label">Qué hacemos</p>
+      <p class="lede-text" data-reveal>Somos un espacio comunitario donde el valor no se mide solo en dinero, sino en la fuerza de las relaciones que sostienen el territorio. A través de un laboratorio de transformación, una tienda, un café y una moneda propia, convertimos lo que la tierra de Barichara ya ofrece — cosechas, plantas medicinales, saberes ancestrales — en productos, ingresos e intercambio para quienes la habitan.</p>
+      <p class="lede-text" data-reveal>No perseguimos la escasez competitiva. Co-creamos abundancia compartida, confiando en que juntos podemos transformar el entorno y construir un futuro próspero para todos.</p>
+    </div>
+  </section>
+
+  <!-- EL ORGANISMO — signature diagram -->
+  <section class="section section-organism" id="organismo">
+    <div class="wrap">
+      <p class="section-label">El organismo</p>
+      <h2 data-reveal>Cinco componentes, <em>una sola raíz</em></h2>
+      <p class="section-intro-text" data-reveal>Casa Común no funciona como una empresa con departamentos separados. Funciona como un organismo — cada parte alimenta a las demás. Toca un nodo para conocerlo.</p>
+
+      <div class="organism-wrap" data-reveal>
+        <svg class="organism-diagram" id="organismSvg" viewBox="0 0 800 620" role="group" aria-label="Diagrama de los componentes de Casa Común">
+          <g class="organism-connectors">
+            <path data-for="laboratorio" d="M400,310 C330,270 250,230 180,140"/>
+            <path data-for="tienda" d="M400,310 C480,260 570,220 640,130"/>
+            <path data-for="cafe" d="M400,310 C420,380 440,450 400,540"/>
+            <path data-for="moneda" d="M400,310 C310,350 230,400 130,470"/>
+            <path data-for="chocolate" d="M400,310 C490,350 580,400 680,470"/>
+          </g>
+
+          <g class="organism-node organism-node--center" data-node="center" tabindex="0">
+            <circle cx="400" cy="310" r="58"/>
+            <text x="400" y="304" text-anchor="middle" class="node-title">Casa</text>
+            <text x="400" y="330" text-anchor="middle" class="node-title">Común</text>
+          </g>
+
+          <g class="organism-node" data-node="laboratorio" tabindex="0">
+            <circle cx="180" cy="140" r="46"/>
+            <text x="180" y="135" text-anchor="middle" class="node-title node-title--sm">Laboratorio</text>
+            <text x="180" y="152" text-anchor="middle" class="node-title node-title--sm">de transformación</text>
+          </g>
+
+          <g class="organism-node" data-node="tienda" tabindex="0">
+            <circle cx="640" cy="130" r="46"/>
+            <text x="640" y="125" text-anchor="middle" class="node-title node-title--sm">Tienda</text>
+            <text x="640" y="142" text-anchor="middle" class="node-title node-title--sm">comunitaria</text>
+          </g>
+
+          <g class="organism-node" data-node="cafe" tabindex="0">
+            <circle cx="400" cy="540" r="46"/>
+            <text x="400" y="535" text-anchor="middle" class="node-title node-title--sm">Café</text>
+            <text x="400" y="552" text-anchor="middle" class="node-title node-title--sm">Casa Común</text>
+          </g>
+
+          <g class="organism-node" data-node="moneda" tabindex="0">
+            <circle cx="130" cy="470" r="46"/>
+            <text x="130" y="465" text-anchor="middle" class="node-title node-title--sm">Los Comunes</text>
+            <text x="130" y="482" text-anchor="middle" class="node-title node-title--sm">moneda local</text>
+          </g>
+
+          <g class="organism-node organism-node--gold" data-node="chocolate" tabindex="0">
+            <circle cx="680" cy="470" r="46"/>
+            <text x="680" y="465" text-anchor="middle" class="node-title node-title--sm">Chocolate</text>
+            <text x="680" y="482" text-anchor="middle" class="node-title node-title--sm">Común</text>
+          </g>
+        </svg>
+
+        <div class="organism-panel" id="organismPanel">
+          <p class="panel-eyebrow" id="panelEyebrow">Casa Común</p>
+          <h3 id="panelTitle">El organismo completo</h3>
+          <p id="panelText">Cada componente existe para alimentar a los demás: lo que se cultiva se transforma en el laboratorio, se vende en la tienda y el café, y circula a través de Los Comunes — cerrando el ciclo de vuelta a los productores. Toca cualquier nodo para explorarlo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOTIVACION -->
+  <section class="section section-motivation">
+    <div class="wrap wrap-split" data-reveal>
+      <div class="split-label">
+        <p class="section-label">Por qué existimos</p>
+        <h2>La curiosidad de crear valor <em>más allá del dinero</em></h2>
+      </div>
+      <div class="split-body">
+        <p>A nivel individual, nos motiva explorar el potencial de nuestros recursos humanos y naturales, junto con el deseo de investigar la creación de valor más allá del dinero y su circulación — como base de una economía social y ambientalmente justa.</p>
+        <p>A nivel colectivo, soñamos con un espacio comunitario que promueva la sostenibilidad y el bienestar de todos. Buscamos co-crear una abundancia compartida en lugar de escasez competitiva. Confiamos en que, juntos, podemos transformar nuestro entorno.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACTO -->
+  <section class="section section-impact" id="impacto">
+    <div class="wrap">
+      <p class="section-label">Impacto</p>
+      <h2 data-reveal>El territorio, <em>contado en personas</em></h2>
+
+      <div class="impact-grid" data-reveal>
+        <div class="impact-item">
+          <span class="impact-number">79</span>
+          <span class="impact-label">Productores vinculados</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-number">53</span>
+          <span class="impact-label">Mujeres productoras</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-number">21</span>
+          <span class="impact-label">Hombres productores</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-number">5</span>
+          <span class="impact-label">Grupos comunitarios</span>
+        </div>
+        <div class="impact-item impact-item--wide">
+          <span class="impact-number">400+</span>
+          <span class="impact-label">Consumidores que forman parte de Casa Común</span>
+        </div>
+      </div>
+
+      <p class="impact-note" data-reveal>Nuestro objetivo es promover la transformación de los recursos locales, fomentando un rol cada vez mayor de las mujeres en la transformación de cosechas, plantas medicinales y productos forestales del territorio — y compartir esta economía regenerativa con quienes visitan Barichara.</p>
+    </div>
+  </section>
+
+  <!-- CHOCOLATE COMUN -->
+  <section class="section section-chocolate" id="chocolate-comun">
+    <div class="wrap wrap-narrow">
+      <p class="section-label light">Proyecto en marcha</p>
+      <h2 data-reveal>Chocolate Común</h2>
+      <p class="chocolate-tagline" data-reveal>Regenerando el territorio a través del chocolate medicinal</p>
+
+      <p class="chocolate-body" data-reveal>Chocolate Común entrelaza cacaos especiales de regiones afectadas por el conflicto con plantas medicinales liofilizadas y cultivadas localmente — moringa, guanábana, maracuyá. Cada chocolate se convierte en un vehículo de bienestar y una historia de interdependencia entre las personas, las plantas y el territorio.</p>
+
+      <div class="chocolate-plants" data-reveal>
+        <div class="plant-tag">Moringa</div>
+        <div class="plant-tag">Guanábana</div>
+        <div class="plant-tag">Maracuyá</div>
+        <div class="plant-tag">Cacao de origen</div>
+      </div>
+
+      <p class="chocolate-body" data-reveal>La implementación ocurre en el laboratorio de transformación de Casa Común, donde los productores co-crean recetas, reciben formación en producción regenerativa, y hacen las primeras ventas piloto a través de la tienda y el café — usando Los Comunes para mantener el valor circulando en el territorio.</p>
+
+      <div class="chocolate-milestones" data-reveal>
+        <p class="milestones-label">Primeros pasos</p>
+        <ul>
+          <li>Montaje del laboratorio de chocolate</li>
+          <li>Formación de diez mujeres productoras</li>
+          <li>Lanzamiento de la primera línea de chocolate medicinal</li>
+          <li>Medición del impacto en medios de vida y biodiversidad local</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUEÑO -->
+  <section class="section section-dream" id="sueno">
+    <div class="wrap wrap-narrow">
+      <p class="section-label">Lo que soñamos</p>
+      <p class="dream-text" data-reveal>Soñamos con un laboratorio equipado para potenciar la transformación de alimentos y productos de higiene y cuidado personal — un espacio donde cada vez más productores y consumidores participen de una economía comunitaria basada en la confianza, la solidaridad y el cuidado del medio ambiente.</p>
+      <p class="dream-text" data-reveal>Soñamos con seguir conectando el potencial de nuestro territorio y su exuberante abundancia, la bondad y las ganas de aprender, para ser una comunidad cada vez más resiliente y próspera.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section-contact" id="contacto">
+    <div class="wrap wrap-narrow contact-inner">
+      <p class="section-label">Visítanos</p>
+      <h2 data-reveal>Ven a tejer con nosotros</h2>
+      <p class="contact-text" data-reveal>Casa Común está en Barichara, Santander — abierto a quien quiera aprender, intercambiar saberes o simplemente compartir una taza de café con nosotros.</p>
+      <div class="contact-links" data-reveal>
+        <a href="https://www.instagram.com/casacomunbarichara/" target="_blank" rel="noopener">Instagram →</a>
+        <a href="https://www.threads.com/@casacomunbarichara" target="_blank" rel="noopener">Threads →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Casa Común · Barichara, Colombia</span>
+    <span>Un organismo de la Fundación Barichara Regenerativa</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
