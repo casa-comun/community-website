@@ -14,8 +14,6 @@
   --rust-700: #8f2410;    /* accent hover/active state */
 
   --gold-300: #dab749;    /* secondary accent on dark backgrounds */
-  --gold-400: #c9a227;    /* secondary accent, slightly deeper */
-  --sage-500: #74814f;    /* tertiary accent, used sparingly */
 
   --font-display: 'Fraunces', serif;
   --font-body: 'Karla', sans-serif;
@@ -90,7 +88,7 @@ img{ max-width: 100%; display: block; }
   width: 46px; height: 46px; border-radius: 50%;
   display: block; object-fit: cover;
 }
-.site-nav{ display: flex; align-items: center; gap: 30px; }
+.site-nav{ display: flex; align-items: center; gap: 26px; }
 .site-nav a{
   text-decoration: none; font-size: 0.95rem; font-weight: 600;
   color: var(--ink-700);
@@ -107,6 +105,16 @@ img{ max-width: 100%; display: block; }
   transition: background 0.2s ease;
 }
 .nav-cta:hover{ background: var(--rust-700); }
+
+.lang-toggle{
+  font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.05em;
+  background: none; border: 1.5px solid rgba(36,20,8,0.25);
+  color: var(--ink-800); border-radius: 999px;
+  padding: 6px 12px; cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.lang-toggle:hover{ border-color: var(--rust-600); color: var(--rust-600); }
 
 .nav-toggle{
   display: none; flex-direction: column; gap: 5px;
@@ -237,7 +245,6 @@ img{ max-width: 100%; display: block; }
   fill: var(--rust-600); stroke: var(--rust-700);
   transform: scale(1.05);
 }
-.organism-node--gold circle{ stroke: var(--gold-400); stroke-width: 2; }
 .organism-node--center circle{ fill: var(--rust-600); stroke: var(--rust-700); stroke-width: 2; }
 .organism-node--center .node-title{ fill: var(--cream); }
 .organism-node--center:hover circle, .organism-node--center.is-active circle{ transform: scale(1.03); }
@@ -276,7 +283,7 @@ img{ max-width: 100%; display: block; }
    ============================================ */
 .section-impact h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 0.7em; }
 .impact-grid{
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5px;
   background: rgba(36,20,8,0.12);
   border: 1.5px solid rgba(36,20,8,0.12);
   margin: 40px 0 32px;
@@ -286,7 +293,7 @@ img{ max-width: 100%; display: block; }
   padding: 34px 22px;
   display: flex; flex-direction: column; gap: 8px;
 }
-.impact-item--wide{ grid-column: span 4; flex-direction: row; align-items: baseline; gap: 18px; }
+.impact-item--wide{ grid-column: span 5; flex-direction: row; align-items: baseline; gap: 18px; }
 .impact-number{
   font-family: var(--font-display); font-weight: 700;
   font-size: 2.6rem; color: var(--rust-600); line-height: 1;
@@ -297,55 +304,139 @@ img{ max-width: 100%; display: block; }
 .impact-note{ max-width: 640px; color: var(--ink-700); font-size: 1.02rem; }
 
 /* ============================================
-   GALLERY
+   GALLERY — videos + Instagram callout
    ============================================ */
 .section-gallery{ background: var(--cream-deep); }
-.gallery-intro{ font-size: 1.05rem; color: var(--ink-700); }
+.gallery-intro{ font-size: 1.05rem; color: var(--ink-700); max-width: 640px; }
+
+.video-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  margin: 40px 0 36px;
+}
+.video-card{
+  position: relative; width: 100%; padding-top: 56.25%; /* 16:9 */
+  background: var(--ink-900); border-radius: var(--radius); overflow: hidden;
+}
+.video-card iframe{
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+}
+
+.instagram-callout{
+  margin-top: 40px;
+  display: flex; align-items: center; gap: 18px;
+  background: var(--cream); border: 1px solid rgba(36,20,8,0.14);
+  border-radius: var(--radius); padding: 20px 24px;
+  text-decoration: none; color: var(--ink-900);
+  max-width: 520px; transition: border-color 0.2s ease;
+}
+.instagram-callout:hover{ border-color: var(--rust-600); }
+.instagram-callout-icon{ width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; }
+.instagram-callout strong{ display: block; font-size: 1rem; }
+.instagram-callout small{ display: block; color: var(--ink-700); font-size: 0.88rem; margin-top: 2px; }
+.instagram-callout-arrow{ margin-left: auto; font-size: 1.2rem; color: var(--rust-600); }
+
+.instagram-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    align-items:start;
+}
+
+.instagram-media{
+    width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+}
+
+@media (max-width:900px){
+    .instagram-grid{
+        grid-template-columns:1fr;
+    }
+}
 
 /* ============================================
-   CHOCOLATE COMÚN
+   TIENDA — lightweight shop (order via form/WhatsApp)
    ============================================ */
-.section-chocolate{
-  background: linear-gradient(180deg, var(--ink-800), var(--ink-900));
-  color: var(--cream-deep);
+.section-shop{ background: var(--cream); }
+.product-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  margin: 40px 0 20px;
 }
-.section-chocolate h2{
-  color: var(--cream); font-size: clamp(2.1rem, 4vw, 2.8rem);
+.product-card{
+  background: var(--cream-deep); border: 1px solid rgba(36,20,8,0.1);
+  border-radius: var(--radius); padding: 26px;
+  display: flex; flex-direction: column; gap: 10px;
 }
-.chocolate-tagline{
-  font-family: var(--font-display); font-style: italic; font-size: 1.25rem;
-  color: var(--gold-300); margin-bottom: 1.2em;
+.product-photo{
+  width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(184,48,22,0.12), rgba(116,129,79,0.14));
+  margin-bottom: 6px;
 }
-.chocolate-body{ color: rgba(243,235,217,0.82); font-size: 1.05rem; }
-.chocolate-plants{ display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 30px; }
-.plant-tag{
-  font-family: var(--font-mono); font-size: 0.82rem;
-  border: 1px solid rgba(201,162,39,0.5); color: var(--gold-300);
-  padding: 6px 14px; border-radius: 999px;
+.product-card h3{ font-size: 1.15rem; margin-bottom: 0.2em; }
+.product-card p{ color: var(--ink-700); font-size: 0.95rem; margin-bottom: 6px; }
+.product-price{ font-family: var(--font-mono); color: var(--rust-600); font-weight: 700; }
+.btn-sm{ padding: 9px 18px; font-size: 0.85rem; align-self: flex-start; margin-top: 6px; }
+.shop-note{ font-size: 0.9rem; color: var(--ink-700); font-style: italic; }
+
+.brochure-grid{ display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px; }
+.brochure-card{
+  display: flex; align-items: center; gap: 14px;
+  border: 1px solid rgba(36,20,8,0.16); border-radius: var(--radius);
+  padding: 14px 20px; text-decoration: none; color: var(--ink-900);
+  transition: border-color 0.2s ease;
 }
-.chocolate-milestones{
-  margin-top: 40px; padding-top: 32px;
-  border-top: 1px solid rgba(243,235,217,0.16);
-}
-.milestones-label{
-  font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase;
-  letter-spacing: 0.12em; color: var(--sage-500); margin-bottom: 1em;
-}
-.chocolate-milestones ul{ margin: 0; padding: 0; list-style: none; }
-.chocolate-milestones li{
-  padding: 12px 0 12px 26px; position: relative;
-  border-top: 1px solid rgba(243,235,217,0.1);
-  color: rgba(243,235,217,0.88);
-}
-.chocolate-milestones li:first-child{ border-top: none; }
-.chocolate-milestones li::before{
-  content: "○"; position: absolute; left: 0; color: var(--gold-400);
-}
+.brochure-card:not(.brochure-card--disabled):hover{ border-color: var(--rust-600); }
+.brochure-title{ font-weight: 700; font-size: 0.95rem; }
+.brochure-action{ font-family: var(--font-mono); font-size: 0.78rem; color: var(--rust-600); }
+.brochure-card--disabled{ opacity: 0.55; cursor: default; }
+.brochure-card--disabled .brochure-action{ color: var(--ink-700); }
 
 /* ============================================
-   DREAM
+   PRODUCTORES
+   ============================================ */
+.section-producers{ background: var(--ink-900); color: var(--cream); }
+.section-producers h2{ color: var(--cream); }
+.section-producers .section-intro-text{ color: rgba(243,235,217,0.75); }
+.producer-grid{
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
+  margin-top: 40px;
+}
+.producer-card{ text-align: center; }
+.producer-photo{
+  width: 88px; height: 88px; border-radius: 50%; margin: 0 auto 12px;
+  background: rgba(243,235,217,0.12); border: 1px solid rgba(243,235,217,0.25);
+}
+.producer-name{ font-weight: 700; margin-bottom: 2px; }
+.producer-role{ font-size: 0.88rem; color: rgba(243,235,217,0.65); margin-bottom: 0; }
+
+/* ============================================
+   SUEÑOS (dreams seeking support)
    ============================================ */
 .section-dream{ background: var(--cream-deep); }
+.dream-grid{
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+  margin: 40px 0 48px;
+}
+.dream-card{
+  background: var(--cream); border: 1px solid rgba(36,20,8,0.12);
+  border-radius: var(--radius); padding: 32px;
+}
+.dream-card-label{
+  font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--rust-600); margin-bottom: 0.8em;
+}
+.dream-card h3{ font-size: 1.5rem; margin-bottom: 0.3em; }
+.dream-card-tagline{
+  font-family: var(--font-display); font-style: italic; font-size: 1.05rem;
+  color: var(--ink-700); margin-bottom: 1em;
+}
+.dream-card p{ color: var(--ink-700); font-size: 0.98rem; }
+.dream-card .plant-tag{
+  font-family: var(--font-mono); font-size: 0.78rem;
+  border: 1px solid rgba(184,48,22,0.35); color: var(--rust-600);
+  padding: 5px 12px; border-radius: 999px;
+}
+.dream-card .chocolate-plants{ display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 18px; }
 .dream-text{
   font-family: var(--font-display); font-size: clamp(1.25rem, 2.4vw, 1.6rem);
   line-height: 1.5; color: var(--ink-900); font-weight: 500;
@@ -358,13 +449,21 @@ img{ max-width: 100%; display: block; }
   background: var(--cream-deep); color: var(--ink-800); text-align: center;
 }
 .section-contact h2{ color: var(--ink-900); }
-.contact-text{ font-size: 1.05rem; color: var(--ink-700); }
-.contact-links{ display: flex; justify-content: center; gap: 28px; margin-top: 20px; }
-.contact-links a{
-  text-decoration: none; font-weight: 700; color: var(--rust-600);
-  border-bottom: 1px solid transparent; transition: border-color 0.2s ease;
+.contact-text{ font-size: 1.05rem; color: var(--ink-700); max-width: 560px; margin-left: auto; margin-right: auto; }
+.contact-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin-top: 34px; text-align: left;
 }
-.contact-links a:hover{ border-color: var(--rust-600); }
+.contact-card{
+  background: var(--cream); border: 1px solid rgba(36,20,8,0.12);
+  border-radius: var(--radius); padding: 18px 22px;
+  text-decoration: none; color: var(--ink-900);
+  display: flex; flex-direction: column; gap: 3px;
+  transition: border-color 0.2s ease;
+}
+.contact-card:hover{ border-color: var(--rust-600); }
+.contact-card-title{ font-weight: 700; }
+.contact-card-sub{ font-size: 0.85rem; color: var(--ink-700); }
 
 .site-footer{ background: var(--ink-900); }
 .footer-inner{
@@ -380,6 +479,11 @@ img{ max-width: 100%; display: block; }
   .organism-wrap{ grid-template-columns: 1fr; }
   .impact-grid{ grid-template-columns: repeat(2, 1fr); }
   .impact-item--wide{ grid-column: span 2; }
+  .video-grid{ grid-template-columns: 1fr; }
+  .product-grid{ grid-template-columns: repeat(2, 1fr); }
+  .producer-grid{ grid-template-columns: repeat(2, 1fr); }
+  .dream-grid{ grid-template-columns: 1fr; }
+  .contact-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px){
@@ -396,6 +500,10 @@ img{ max-width: 100%; display: block; }
   .section{ padding: 76px 0; }
   .impact-grid{ grid-template-columns: 1fr; }
   .impact-item--wide{ grid-column: span 1; flex-direction: column; gap: 4px; }
+  .product-grid{ grid-template-columns: 1fr; }
+  .producer-grid{ grid-template-columns: 1fr; }
+  .contact-grid{ grid-template-columns: 1fr; }
+  .instagram-callout{ max-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce){

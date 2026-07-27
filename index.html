@@ -25,12 +25,13 @@
   </button>
 
   <nav class="site-nav" id="siteNav">
-    <a href="#organismo">El Organismo</a>
-    <a href="#impacto">Impacto</a>
-    <a href="#galeria">Galería</a>
-    <a href="#chocolate-comun">Chocolate Común</a>
-    <a href="#sueno">Sueño</a>
-    <a href="#contacto" class="nav-cta">Visítanos</a>
+    <a href="#organismo" data-i18n="nav.organismo">El Organismo</a>
+    <a href="#impacto" data-i18n="nav.impacto">Impacto</a>
+    <a href="#galeria" data-i18n="nav.galeria">Galería</a>
+    <a href="#tienda" data-i18n="nav.tienda">Tienda</a>
+    <a href="#suenos" data-i18n="nav.suenos">Sueños</a>
+    <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch language / Cambiar idioma">EN</button>
+    <a href="#contacto" class="nav-cta" data-i18n="nav.visitanos">Visítanos</a>
   </nav>
 </header>
 
@@ -59,12 +60,12 @@
 
     <div class="hero-content">
       <img src="assets/casa-comun-logo.jpg" alt="Sello Casa Común, Barichara — Cra 8 #8-19" class="hero-logo">
-      <p class="eyebrow">Barichara, Santander · Colombia</p>
-      <h1>Una organización para una <em>economía solidaria</em></h1>
-      <p class="hero-lede">Casa Común transforma la economía de Barichara en un tejido de abundancia compartida — donde los recursos del territorio, el trabajo de sus productores y el cuidado del entorno se convierten en riqueza para todos.</p>
+      <p class="eyebrow" data-i18n="hero.eyebrow">Barichara, Santander · Colombia</p>
+      <h1 data-i18n="hero.title">Un experimento para una <em>economía de bienestar</em></h1>
+      <p class="hero-lede" data-i18n="hero.lede">Casa Común transforma la economía de Barichara en un tejido de abundancia compartida — donde los recursos del territorio, el trabajo de sus productores y el cuidado del entorno se convierten en riqueza para todos.</p>
       <div class="hero-actions">
-        <a href="#organismo" class="btn btn-primary">Conoce nuestra organización</a>
-        <a href="#chocolate-comun" class="btn btn-ghost">Chocolate Común →</a>
+        <a href="#organismo" class="btn btn-primary" data-i18n="hero.cta1">Conoce el organismo</a>
+        <a href="#suenos" class="btn btn-ghost" data-i18n="hero.cta2">Nuestros sueños →</a>
       </div>
     </div>
   </section>
@@ -72,18 +73,18 @@
   <!-- QUE HACEMOS -->
   <section class="section section-intro" id="que-hacemos">
     <div class="wrap wrap-narrow">
-      <p class="section-label">Qué hacemos</p>
-      <p class="lede-text" data-reveal>Somos un espacio comunitario donde el valor no se mide solo en dinero, sino en la fuerza de las relaciones que sostienen el territorio. A través de un laboratorio de transformación, una tienda, un café y una moneda propia, convertimos lo que la tierra de Barichara ya ofrece — cosechas, plantas medicinales, saberes ancestrales — en productos, ingresos e intercambio para quienes la habitan.</p>
-      <p class="lede-text" data-reveal>No perseguimos la escasez competitiva. Co-creamos abundancia compartida, confiando en que juntos podemos transformar el entorno y construir un futuro próspero para todos.</p>
+      <p class="section-label" data-i18n="que.label">Qué hacemos</p>
+      <p class="lede-text" data-reveal data-i18n="que.p1">Somos un espacio comunitario donde el valor no se mide solo en dinero, sino en la fuerza de las relaciones que sostienen el territorio. A través de un laboratorio de transformación, una tienda, un café y una moneda propia, convertimos lo que la tierra de Barichara ya ofrece — cosechas, plantas medicinales, saberes ancestrales — en productos, ingresos e intercambio para quienes la habitan.</p>
+      <p class="lede-text" data-reveal data-i18n="que.p2">No perseguimos la escasez competitiva. Co-creamos abundancia compartida, confiando en que juntos podemos transformar el entorno y construir un futuro próspero para todos.</p>
     </div>
   </section>
 
   <!-- EL ORGANISMO — signature diagram -->
   <section class="section section-organism" id="organismo">
     <div class="wrap">
-      <p class="section-label">El organismo</p>
-      <h2 data-reveal>Cinco componentes, <em>una sola raíz</em></h2>
-      <p class="section-intro-text" data-reveal>Casa Común no funciona como una empresa con departamentos separados. Funciona como un organismo — cada parte alimenta a las demás. Toca un nodo para conocerlo.</p>
+      <p class="section-label" data-i18n="organismo.label">El organismo</p>
+      <h2 data-reveal data-i18n="organismo.title">Cinco componentes, <em>una sola raíz</em></h2>
+      <p class="section-intro-text" data-reveal data-i18n="organismo.intro">Casa Común no funciona como una empresa con departamentos separados. Funciona como un organismo — cada parte alimenta a las demás. Toca un nodo para conocerlo.</p>
 
       <div class="organism-wrap" data-reveal>
         <svg class="organism-diagram" id="organismSvg" viewBox="0 0 800 620" role="group" aria-label="Diagrama de los componentes de Casa Común">
@@ -92,7 +93,7 @@
             <path data-for="tienda" d="M400,310 C480,260 570,220 640,130"/>
             <path data-for="cafe" d="M400,310 C420,380 440,450 400,540"/>
             <path data-for="moneda" d="M400,310 C310,350 230,400 130,470"/>
-            <path data-for="chocolate" d="M400,310 C490,350 580,400 680,470"/>
+            <path data-for="caney" d="M400,310 C490,350 580,400 680,470"/>
           </g>
 
           <g class="organism-node organism-node--center" data-node="center" tabindex="0">
@@ -125,16 +126,16 @@
             <text x="130" y="482" text-anchor="middle" class="node-title node-title--sm">moneda local</text>
           </g>
 
-          <g class="organism-node organism-node--gold" data-node="chocolate" tabindex="0">
+          <g class="organism-node" data-node="caney" tabindex="0">
             <circle cx="680" cy="470" r="46"/>
-            <text x="680" y="465" text-anchor="middle" class="node-title node-title--sm">Chocolate</text>
+            <text x="680" y="465" text-anchor="middle" class="node-title node-title--sm">Caney</text>
             <text x="680" y="482" text-anchor="middle" class="node-title node-title--sm">Común</text>
           </g>
         </svg>
 
         <div class="organism-panel" id="organismPanel">
           <p class="panel-eyebrow" id="panelEyebrow">Casa Común</p>
-          <h3 id="panelTitle">Toda la organización</h3>
+          <h3 id="panelTitle">Todo el organismo</h3>
           <p id="panelText">Cada componente existe para alimentar a los demás: lo que se cultiva se transforma en el laboratorio, se vende en la tienda y el café, y circula a través de Los Comunes — cerrando el ciclo de vuelta a los productores. Toca cualquier nodo para explorarlo.</p>
         </div>
       </div>
@@ -145,12 +146,12 @@
   <section class="section section-motivation">
     <div class="wrap wrap-split" data-reveal>
       <div class="split-label">
-        <p class="section-label">Por qué existimos</p>
-        <h2>La curiosidad de crear valor <em>más allá del dinero</em></h2>
+        <p class="section-label" data-i18n="motiv.label">Por qué existimos</p>
+        <h2 data-i18n="motiv.title">La curiosidad de crear valor <em>más allá del dinero</em></h2>
       </div>
       <div class="split-body">
-        <p>A nivel individual, nos motiva explorar el potencial de nuestros recursos humanos y naturales, junto con el deseo de investigar la creación de valor más allá del dinero y su circulación — como base de una economía social y ambientalmente justa.</p>
-        <p>A nivel colectivo, soñamos con un espacio comunitario que promueva la sostenibilidad y el bienestar de todos. Buscamos co-crear una abundancia compartida en lugar de escasez competitiva. Confiamos en que, juntos, podemos transformar nuestro entorno.</p>
+        <p data-i18n="motiv.p1">A nivel individual, nos motiva explorar el potencial de nuestros recursos humanos y naturales, junto con el deseo de investigar la creación de valor más allá del dinero y su circulación — como base de una economía social y ambientalmente justa.</p>
+        <p data-i18n="motiv.p2">A nivel colectivo, soñamos con un espacio comunitario que promueva la sostenibilidad y el bienestar de todos. Buscamos co-crear una abundancia compartida en lugar de escasez competitiva. Confiamos en que, juntos, podemos transformar nuestro entorno.</p>
       </div>
     </div>
   </section>
@@ -158,99 +159,253 @@
   <!-- IMPACTO -->
   <section class="section section-impact" id="impacto">
     <div class="wrap">
-      <p class="section-label">Impacto</p>
-      <h2 data-reveal>El territorio, <em>contado en personas</em></h2>
+      <p class="section-label" data-i18n="impacto.label">Impacto</p>
+      <h2 data-reveal data-i18n="impacto.title">El territorio, <em>contado en personas</em></h2>
 
       <div class="impact-grid" data-reveal>
         <div class="impact-item">
-          <span class="impact-number">79</span>
-          <span class="impact-label">Productores vinculados</span>
+          <span class="impact-number">141</span>
+          <span class="impact-label" data-i18n="impacto.stat1">Productores vinculados</span>
         </div>
         <div class="impact-item">
-          <span class="impact-number">53</span>
-          <span class="impact-label">Mujeres productoras</span>
+          <span class="impact-number">93</span>
+          <span class="impact-label" data-i18n="impacto.stat2">Mujeres productoras</span>
         </div>
         <div class="impact-item">
-          <span class="impact-number">21</span>
-          <span class="impact-label">Hombres productores</span>
+          <span class="impact-number">42</span>
+          <span class="impact-label" data-i18n="impacto.stat3">Hombres productores</span>
         </div>
         <div class="impact-item">
-          <span class="impact-number">5</span>
-          <span class="impact-label">Grupos comunitarios</span>
+          <span class="impact-number">6</span>
+          <span class="impact-label" data-i18n="impacto.stat4">Grupos comunitarios</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-number">650+</span>
+          <span class="impact-label" data-i18n="impacto.stat5">Consumidores que forman parte de Casa Común</span>
         </div>
         <div class="impact-item impact-item--wide">
-          <span class="impact-number">400+</span>
-          <span class="impact-label">Consumidores que forman parte de Casa Común</span>
+          <span class="impact-number">$900M+</span>
+          <span class="impact-label" data-i18n="impacto.stat6">Pesos movilizados dentro de la economía comunitaria</span>
         </div>
       </div>
 
-      <p class="impact-note" data-reveal>Nuestro objetivo es promover la transformación de los recursos locales, fomentando un rol cada vez mayor de las mujeres en la transformación de cosechas, plantas medicinales y productos forestales del territorio — y compartir esta economía regenerativa con quienes visitan Barichara.</p>
+      <p class="impact-note" data-reveal data-i18n="impacto.note">Nuestro objetivo es promover la transformación de los recursos locales, fomentando un rol cada vez mayor de las mujeres en la transformación de cosechas, plantas medicinales y productos forestales del territorio — y compartir esta economía regenerativa con quienes visitan Barichara.</p>
     </div>
   </section>
 
   <!-- GALERIA -->
   <section class="section section-gallery" id="galeria">
     <div class="wrap">
-      <p class="section-label">Galería</p>
-      <h2 data-reveal>Nuestra comunidad, <em>en acción</em></h2>
-      <p class="gallery-intro" data-reveal>Las fotos y vídeos de Casa Común pronto estarán disponibles.</p>
+      <p class="section-label" data-i18n="galeria.label">Galería</p>
+      <h2 data-reveal data-i18n="galeria.title">Nuestra comunidad, <em>en acción</em></h2>
+      <p class="gallery-intro" data-reveal data-i18n="galeria.intro">Aún no tenemos una librería de fotos propia — mientras tanto, estos videos y nuestro Instagram cuentan la historia mejor que nosotros.</p>
+
+      <div class="video-grid" data-reveal>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/9pGuOYm1__U" title="Video de Casa Común 1" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/iK-OtZnNTOg" title="Video de Casa Común 2" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/RL5RivWivR0" title="Video de Casa Común 3" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Featured Instagram -->
+      <h3 class="instagram-gallery-title" data-i18n="galeria.featured">
+          Destacado de Instagram
+      </h3>
+
+      <div class="instagram-grid">
+
+          <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DZYz3f5EY6V/"
+              data-instgrm-version="14">
+          </blockquote>
+
+          <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/Da6DBEGliww/"
+              data-instgrm-version="14">
+          </blockquote>
+
+          <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DTi1OfbEZ-W/"
+              data-instgrm-version="14">
+          </blockquote>
+
+      </div>
+
+      <a class="instagram-callout" href="https://www.instagram.com/casacomunbarichara/" target="_blank" rel="noopener">
+        <img src="assets/insta.png" alt="" class="instagram-callout-icon">
+        <span>
+          <strong data-i18n="galeria.igTitle">Síguenos en Instagram</strong>
+          <small data-i18n="galeria.igSub">@casacomunbarichara — fotos y novedades del día a día</small>
+        </span>
+        <span class="instagram-callout-arrow">→</span>
+      </a>
     </div>
   </section>
 
-  <!-- CHOCOLATE COMUN -->
-  <section class="section section-chocolate" id="chocolate-comun">
-    <div class="wrap wrap-narrow">
-      <p class="section-label light">Proyecto en marcha</p>
-      <h2 data-reveal translate="no">Chocolate Común</h2>
-      <p class="chocolate-tagline" data-reveal>Regenerando el territorio a través del chocolate medicinal</p>
+  <!-- TIENDA -->
+  <section class="section section-shop" id="tienda">
+    <div class="wrap">
+      <p class="section-label" data-i18n="tienda.label">Tienda</p>
+      <h2 data-reveal data-i18n="tienda.title">Productos que <em>sostienen el organismo</em></h2>
+      <p class="section-intro-text" data-reveal data-i18n="tienda.intro">Cada compra apoya directamente a los productores de Casa Común y ayuda a sostener el laboratorio, la tienda y el café. Escríbenos para pedir cualquiera de estos productos.</p>
 
-      <p class="chocolate-body" data-reveal>Chocolate Común entrelaza cacaos especiales de regiones afectadas por el conflicto con plantas medicinales liofilizadas y cultivadas localmente — moringa, guanábana, maracuyá. Cada chocolate se convierte en un vehículo de bienestar y una historia de interdependencia entre las personas, las plantas y el territorio.</p>
-
-      <div class="chocolate-plants" data-reveal>
-        <div class="plant-tag">Moringa</div>
-        <div class="plant-tag">Guanábana</div>
-        <div class="plant-tag">Maracuyá</div>
-        <div class="plant-tag">Cacao de origen</div>
+      <!--
+        CÓMO AGREGAR UN PRODUCTO NUEVO:
+        Copia un bloque completo <article class="product-card">...</article>,
+        pégalo antes de </div> (cierre de "product-grid"), y cambia el
+        nombre, la descripción y el precio. La imagen es opcional: si no
+        hay foto, el círculo simplemente queda del color de fondo.
+      -->
+      <div class="product-grid" data-reveal>
+        <article class="product-card">
+          <div class="product-photo" aria-hidden="true"></div>
+          <h3 data-i18n="tienda.p1.name">Línea Menta Viva</h3>
+          <p data-i18n="tienda.p1.desc">Productos de limpieza natural elaborados por el colectivo de mujeres Menta Viva.</p>
+          <span class="product-price">$—</span>
+          <a class="btn btn-primary btn-sm" href="https://hqsfn14shrm.typeform.com/to/eL6s6LUb" target="_blank" rel="noopener" data-i18n="tienda.order">Pedir este producto</a>
+        </article>
+        <article class="product-card">
+          <div class="product-photo" aria-hidden="true"></div>
+          <h3 data-i18n="tienda.p2.name">Café Casa Común</h3>
+          <p data-i18n="tienda.p2.desc">Café cultivado y tostado por productores locales del territorio.</p>
+          <span class="product-price">$—</span>
+          <a class="btn btn-primary btn-sm" href="https://hqsfn14shrm.typeform.com/to/eL6s6LUb" target="_blank" rel="noopener" data-i18n="tienda.order">Pedir este producto</a>
+        </article>
+        <article class="product-card">
+          <div class="product-photo" aria-hidden="true"></div>
+          <h3 data-i18n="tienda.p3.name">Plantas e infusiones</h3>
+          <p data-i18n="tienda.p3.desc">Plantas medicinales secas y mezclas para infusión, cultivadas en Barichara.</p>
+          <span class="product-price">$—</span>
+          <a class="btn btn-primary btn-sm" href="https://hqsfn14shrm.typeform.com/to/eL6s6LUb" target="_blank" rel="noopener" data-i18n="tienda.order">Pedir este producto</a>
+        </article>
       </div>
+      <p class="shop-note" data-i18n="tienda.note">Catálogo en construcción — precios y fotos se irán actualizando a medida que el laboratorio los defina.</p>
 
-      <p class="chocolate-body" data-reveal>La implementación ocurre en el laboratorio de transformación de Casa Común, donde los productores co-crean recetas, reciben formación en producción regenerativa, y hacen las primeras ventas piloto a través de la tienda y el café — usando Los Comunes para mantener el valor circulando en el territorio.</p>
-
-      <div class="chocolate-milestones" data-reveal>
-        <p class="milestones-label">Primeros pasos</p>
-        <ul>
-          <li>Montaje del laboratorio de chocolate</li>
-          <li>Formación de diez mujeres productoras</li>
-          <li>Lanzamiento de la primera línea de chocolate medicinal</li>
-          <li>Medición del impacto en medios de vida y biodiversidad local</li>
-        </ul>
+      <!-- BROCHURES -->
+      <div class="brochure-grid" data-reveal>
+        <a class="brochure-card" href="assets/brochures/menta-viva-brochure.pdf" target="_blank" rel="noopener">
+          <span class="brochure-title" data-i18n="brochure.menta">Folleto — Menta Viva</span>
+          <span class="brochure-action" data-i18n="brochure.download">Descargar PDF ↓</span>
+        </a>
+        <span class="brochure-card brochure-card--disabled">
+          <span class="brochure-title" data-i18n="brochure.casacomun">Folleto — Casa Común</span>
+          <span class="brochure-action" data-i18n="brochure.soon">Próximamente</span>
+        </span>
       </div>
     </div>
   </section>
 
-  <!-- SUEÑO -->
-  <section class="section section-dream" id="sueno">
+  <!-- PRODUCTORES -->
+  <section class="section section-producers">
     <div class="wrap wrap-narrow">
-      <p class="section-label">Lo que soñamos</p>
-      <p class="dream-text" data-reveal>Soñamos con un laboratorio equipado para potenciar la transformación de alimentos y productos de higiene y cuidado personal — un espacio donde cada vez más productores y consumidores participen de una economía comunitaria basada en la confianza, la solidaridad y el cuidado del medio ambiente.</p>
-      <p class="dream-text" data-reveal>Soñamos con seguir conectando el potencial de nuestro territorio y su exuberante abundancia, la bondad y las ganas de aprender, para ser una comunidad cada vez más resiliente y próspera.</p>
+      <p class="section-label light" data-i18n="prod.label">Nuestra gente</p>
+      <h2 data-reveal data-i18n="prod.title">Quienes hacen posible <em>el organismo</em></h2>
+      <p class="section-intro-text" data-reveal data-i18n="prod.intro">Un vistazo a algunas de las personas que cultivan, transforman e intercambian dentro de Casa Común. Esta sección crece a medida que más productores se suman.</p>
+
+      <!--
+        CÓMO AGREGAR UN PRODUCTOR:
+        Copia un bloque <article class="producer-card">...</article> y
+        cambia el nombre y el oficio. "photo" queda vacío si no hay foto.
+      -->
+      <div class="producer-grid" data-reveal>
+        <article class="producer-card">
+          <div class="producer-photo" aria-hidden="true"></div>
+          <p class="producer-name" data-i18n="prod.p1.name">Nombre del productor</p>
+          <p class="producer-role" data-i18n="prod.p1.role">Oficio o producto</p>
+        </article>
+        <article class="producer-card">
+          <div class="producer-photo" aria-hidden="true"></div>
+          <p class="producer-name" data-i18n="prod.p2.name">Nombre del productor</p>
+          <p class="producer-role" data-i18n="prod.p2.role">Oficio o producto</p>
+        </article>
+        <article class="producer-card">
+          <div class="producer-photo" aria-hidden="true"></div>
+          <p class="producer-name" data-i18n="prod.p3.name">Nombre del productor</p>
+          <p class="producer-role" data-i18n="prod.p3.role">Oficio o producto</p>
+        </article>
+        <article class="producer-card">
+          <div class="producer-photo" aria-hidden="true"></div>
+          <p class="producer-name" data-i18n="prod.p4.name">Nombre del productor</p>
+          <p class="producer-role" data-i18n="prod.p4.role">Oficio o producto</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUEÑOS -->
+  <section class="section section-dream" id="suenos">
+    <div class="wrap">
+      <p class="section-label" data-i18n="suenos.label">Lo que soñamos</p>
+      <h2 data-reveal data-i18n="suenos.title">Dos sueños <em>buscando alas</em></h2>
+      <p class="section-intro-text" data-reveal data-i18n="suenos.intro">Estos dos proyectos aún no existen — están en construcción y buscamos aliados que aporten fondos o experiencia para hacerlos realidad.</p>
+
+      <div class="dream-grid" data-reveal>
+        <article class="dream-card">
+          <p class="dream-card-label" data-i18n="suenos.d1.label">Sueño en marcha</p>
+          <h3 data-i18n="suenos.d1.title">Chocolate Común</h3>
+          <p class="dream-card-tagline" data-i18n="suenos.d1.tagline">Regenerando el territorio a través del chocolate medicinal</p>
+          <p data-i18n="suenos.d1.body">Chocolate Común entrelazará cacaos especiales de regiones afectadas por el conflicto con plantas medicinales liofilizadas y cultivadas localmente — moringa, guanábana, maracuyá. Cada chocolate será un vehículo de bienestar y una historia de interdependencia entre las personas, las plantas y el territorio.</p>
+          <div class="chocolate-plants">
+            <div class="plant-tag">Moringa</div>
+            <div class="plant-tag">Guanábana</div>
+            <div class="plant-tag">Maracuyá</div>
+            <div class="plant-tag">Cacao de origen</div>
+          </div>
+          <a class="btn btn-primary btn-sm" href="https://hqsfn14shrm.typeform.com/to/eL6s6LUb" target="_blank" rel="noopener" data-i18n="suenos.support">Quiero apoyar este sueño →</a>
+        </article>
+
+        <article class="dream-card">
+          <p class="dream-card-label" data-i18n="suenos.d2.label">Sueño en marcha</p>
+          <h3 data-i18n="suenos.d2.title">Centro de Transformación Común</h3>
+          <p class="dream-card-tagline" data-i18n="suenos.d2.tagline">Una planta de producción para toda la comunidad</p>
+          <p data-i18n="suenos.d2.body">Soñamos con un laboratorio equipado para potenciar la transformación de alimentos y productos de higiene y cuidado personal — un espacio donde cada vez más productores y consumidores participen de una economía comunitaria basada en la confianza, la solidaridad y el cuidado del medio ambiente.</p>
+          <a class="btn btn-primary btn-sm" href="https://hqsfn14shrm.typeform.com/to/eL6s6LUb" target="_blank" rel="noopener" data-i18n="suenos.support">Quiero apoyar este sueño →</a>
+        </article>
+      </div>
+
+      <p class="dream-text" data-reveal data-i18n="suenos.closing">Soñamos con seguir conectando el potencial de nuestro territorio y su exuberante abundancia, la bondad y las ganas de aprender, para ser una comunidad cada vez más resiliente y próspera.</p>
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section class="section section-contact" id="contacto">
-    <div class="wrap wrap-narrow contact-inner">
-      <p class="section-label">Visítanos</p>
-      <h2 data-reveal>Ven a tejer con nosotros</h2>
-      <p class="contact-text" data-reveal>Casa Común está en Barichara, Santander — abierto a quien quiera aprender, intercambiar saberes o simplemente compartir una taza de café con nosotros.</p>
-      <div class="contact-links" data-reveal>
-        <a href="https://www.instagram.com/casacomunbarichara/" target="_blank" rel="noopener">
-          <img src="assets/insta.png" alt="Instagram →" class="brand-mark">
+    <div class="wrap contact-inner">
+      <p class="section-label" data-i18n="contacto.label">Visítanos</p>
+      <h2 data-reveal data-i18n="contacto.title">Ven a tejer con nosotros</h2>
+      <p class="contact-text" data-reveal data-i18n="contacto.text">Casa Común está en Barichara, Santander — abierto a quien quiera aprender, intercambiar saberes o simplemente compartir una taza de café con nosotros.</p>
+
+      <div class="contact-grid" data-reveal>
+        <a class="contact-card" href="https://www.google.com/maps/place/Casa+Com%C3%BAn+-+Communal+Shop/@6.6371259,-73.2210883,53m/data=!3m1!1e3!4m6!3m5!1s0x8e69cf63c1af4b9b:0x421a40bfa63d5908!8m2!3d6.6372046!4d-73.2208836!16s%2Fg%2F11s8xjjykm" target="_blank" rel="noopener">
+          <span class="contact-card-title" data-i18n="contacto.maps">Cómo llegar</span>
+          <span class="contact-card-sub" data-i18n="contacto.mapsSub">Ubicación en Google Maps</span>
         </a>
-        <a href="https://www.threads.com/@casacomunbarichara" target="_blank" rel="noopener">
-          <img src="assets/thread.png" alt="Threads →" class="brand-mark">
+        <a class="contact-card" href="https://chat.whatsapp.com/BwGKzoViUtj9eZvpovW9JW" target="_blank" rel="noopener">
+          <span class="contact-card-title" data-i18n="contacto.wp">Grupo de WhatsApp</span>
+          <span class="contact-card-sub" data-i18n="contacto.wpSub">Únete a la comunidad</span>
         </a>
-        <a href="https://chat.whatsapp.com/BwGKzoViUtj9eZvpovW9JW?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener">
-          <img src="assets/wp.svg" alt="WhatsApp →" class="brand-mark">
+        <a class="contact-card" href="https://calendar.google.com/calendar/u/0/r?cid=dGllbmRhY29tdW5iYXJpY2hhcmFAZ21haWwuY29t" target="_blank" rel="noopener">
+          <span class="contact-card-title" data-i18n="contacto.cal">Calendario</span>
+          <span class="contact-card-sub" data-i18n="contacto.calSub">Talleres y actividades</span>
+        </a>
+        <a class="contact-card" href="https://hqsfn14shrm.typeform.com/to/eL6s6LUb" target="_blank" rel="noopener">
+          <span class="contact-card-title" data-i18n="contacto.form">Formulario</span>
+          <span class="contact-card-sub" data-i18n="contacto.formSub">Escríbenos o postúlate</span>
+        </a>
+        <a class="contact-card" href="https://www.instagram.com/casacomunbarichara/" target="_blank" rel="noopener">
+          <span class="contact-card-title">Instagram</span>
+          <span class="contact-card-sub">@casacomunbarichara</span>
+        </a>
+        <a class="contact-card" href="https://www.threads.com/@casacomunbarichara" target="_blank" rel="noopener">
+          <span class="contact-card-title">Threads</span>
+          <span class="contact-card-sub">@casacomunbarichara</span>
         </a>
       </div>
     </div>
@@ -261,10 +416,11 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <span>Casa Común · Barichara, Colombia</span>
-    <span>Un organismo de la Fundación Barichara Regenerativa</span>
+    <span data-i18n="footer.tag">Un organismo de la Fundación Barichara Regenerativa</span>
   </div>
 </footer>
 
 <script src="script.js"></script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
